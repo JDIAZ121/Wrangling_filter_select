@@ -116,6 +116,8 @@ movies %>%
 # Which Batman movies are in the dataset?
 ```
 After running the code,i found out that there are 8 batman movies in the data.
+
+
 > A note of caution: This method does not account for misentries and bad data. A mispelled word could cause an observation to escape your filter. This is only scratching the surface of what we can do with strings in R, [here is a nice chapter to get more info on handling strings](https://r4ds.had.co.nz/strings.html)
 
 
@@ -216,8 +218,12 @@ After running the above code, i figured out that there were 1248 movies made in 
 2. Which Comedies with an MPAA rating, over 120 minutes have a rating above 8?
 
 ```{r}
+movies%>%
+  filter(Comedy == 1, mpaa>0, length > 120, rating > 8)
 
 ```
+After running the code,i found out that there were 4 movies that fall under those categories.
+
 
 3. Create a subset of only Harry Potter movies with the title, rating, budget, and votes. Which movies are included in this data? Which is highest rated? Which has the most votes on imdb.com?
 
